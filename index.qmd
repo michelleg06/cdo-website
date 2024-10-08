@@ -1,0 +1,19 @@
+---
+title: "UNU-MERIT's Capacity Development Office"
+#date: '2022-09-21'
+output: html_document
+
+---
+<style>
+    body {
+    text-align: justify}
+</style>
+
+## About us
+The Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s Sustainable Development Goals.
+
+**Our purpose** as a university and UN think tank is to offer unique learning and training opportunities not only to students but also to everyone looking to address contemporary and future sustainable development challenges, expand their knowledge and networks, and achieve personal and professional growth.
+
+**Our participants** come from across the world and backgrounds including  government, civil society, academia, NGOs, international organisations and the UN itself. To allow work activities and educational programmes to be undertaken simultaneously, courses and trainings are offered in-person, online and with a blend of both approaches.
+
+**Our programmes** cover a wide range of topics and societal issues. Often developed in collaboration with UNU-MERIT’s Research Units and external partners, they translate and tailor academic knowledge for professional uptake in order to have true impact.

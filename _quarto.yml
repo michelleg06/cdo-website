@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  title: "Capacity Development Office website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+     right:
+      - icon: 
+
+format:
+  html:
+    theme: cosmo
+    template-partials:
+        - title-block.html
+    css: style.css
+    smooth-scroll: true
+    code-annotations: hover
+    title-block-banner: true
+    toc: true
+    toc-location: left
+    toc-title: " "
+    code-fold: true
+    code-summary: "Code"
+    includes:
+            after_body: footer.html
+            logo: "images/logo.png"
+            primary-color: "#a31f37"
+
+output_dir: "." # if publishing on Github pages
