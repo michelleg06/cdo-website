@@ -9,6 +9,22 @@ output: html_document
     text-align: justify}
 </style>
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magick)
+library(tidyverse)
+library(data.table)
+library(rmarkdown)
+```
+
+<center>
+```{r pressure, echo=FALSE, fig.cap=" ", out.width = '65%'}
+knitr::include_graphics("/Users/michellegonzalez/Documents/GitHub/Machine-Learning-for-Public-Policy/Images/ML4PP.png")
+```
+</center>
+
+
+
 ## About us
 The Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s Sustainable Development Goals.
 
