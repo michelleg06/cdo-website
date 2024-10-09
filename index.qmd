@@ -1,6 +1,6 @@
 ---
-title: "UNU-MERIT's Capacity Development Office"
-#date: '2022-09-21'
+#title: "UNU-MERIT's Capacity Development Office"
+#date: '2024'
 output: html_document
 
 ---
@@ -13,23 +13,86 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(magick)
 library(tidyverse)
-library(data.table)
 library(rmarkdown)
+library(leaflet)
 ```
 
 <center>
 ```{r pressure, echo=FALSE, fig.cap=" ", out.width = '65%'}
-knitr::include_graphics("/Users/michellegonzalez/Documents/GitHub/Machine-Learning-for-Public-Policy/Images/ML4PP.png")
+knitr::include_graphics("/Users/michellegonzalez/Documents/GitHub/cdo_website/images/logo.png")
 ```
 </center>
 
 
-
 ## About us
-The Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s Sustainable Development Goals.
+The Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s [Sustainable Development Goals.](https://sdgs.un.org/goals)
 
 **Our purpose** as a university and UN think tank is to offer unique learning and training opportunities not only to students but also to everyone looking to address contemporary and future sustainable development challenges, expand their knowledge and networks, and achieve personal and professional growth.
 
 **Our participants** come from across the world and backgrounds including  government, civil society, academia, NGOs, international organisations and the UN itself. To allow work activities and educational programmes to be undertaken simultaneously, courses and trainings are offered in-person, online and with a blend of both approaches.
 
 **Our programmes** cover a wide range of topics and societal issues. Often developed in collaboration with UNU-MERIT’s Research Units and external partners, they translate and tailor academic knowledge for professional uptake in order to have true impact.
+
+Besides our free learning materials, which you can find in this website, we also offer a range of **paid options**, such as:
+<br>
+<br>
+
+<ul id="firstlist">
+	<li>Personal tutor to guide you through the free materials and resources</li>
+	<li>Personalized workshops or in-depth learning content development</li>
+	<li>Paid courses on various topics.</li>
+</ul>
+<br>
+<center>
+<a href="https://unu.edu/sites/default/files/2024-02/CDO%20Flyer_UNU%20MERIT.pdf" download>
+  <button class="button">
+    <i class="bi bi-cloud-arrow-down"></i> <!-- Include the cloud-arrow-down icon -->
+    Download our Brochure
+  </button>
+</a>
+</center>
+
+## Contact us
+
+You can get in touch with us via email, by sending us a message through the contact form, or calling our offices at 📞 +31 (0)43 388 4400.
+
+<br>
+
+<center>
+<a href="mailto:michelle.gonzalez.am@gmail.com">
+    <button class="button">
+        <i class="bi bi-envelope-at"></i> Email us
+    </button>
+</a>
+
+</center>
+<br>
+<center>**Or leave a message below!** <center>
+<br>
+<form action="https://example.com/submit-form" method="POST">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<br>
+<br>
+
+**Find us on OpenStreetMap!**
+<br>
+<center><i class="bi bi-geo"></i> Boschstraat 24, 6211 AX Maastricht, The Netherlands.</center>
+
+```{r, echo = FALSE}
+# Create an interactive OpenStreetMap map with UNU-MERIT and CDO office location
+leaflet() %>%
+  addTiles() %>% # Add default OpenStreetMap map tiles
+  addMarkers(lng = 5.691, lat = 50.852, popup = "UNU-MERIT in Maastricht")
+
+```

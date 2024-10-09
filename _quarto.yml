@@ -2,32 +2,45 @@ project:
   type: website
 
 website:
-  title: "Capacity Development Office website"
+  reader-mode: true
+  open-graph: true
+  page-navigation: true
+  page-footer: 
+    left: "Copyright 2024 || UNU-MERIT Capacity Development Office" 
+    right: 
+      - icon: github
+        href: https://github.com/michelleg06/
+      - icon: building 
+        href: https://unu.edu/merit 
+
+  title: "CDO"
   navbar:
-    left:
+    right:
       - href: index.qmd
-        text: Home
-      - about.qmd
-     right:
-      - icon: 
+        icon: globe
+        text: "Home"
+      - href: networks.qmd
+        icon: share
+        text: "Economic Networks"
+
+
+    
 
 format:
   html:
     theme: cosmo
-    template-partials:
-        - title-block.html
     css: style.css
     smooth-scroll: true
     code-annotations: hover
     title-block-banner: true
-    toc: true
-    toc-location: left
-    toc-title: " "
+    toc: false
+    #toc-location: left
+    #toc-title: " "
     code-fold: true
     code-summary: "Code"
-    includes:
-            after_body: footer.html
-            logo: "images/logo.png"
-            primary-color: "#a31f37"
+    fontawesome: true  # Enable Font Awesome icons
+    #includes:
+    #  after_body: footer.html  # Correct indentation here
 
-output_dir: "." # if publishing on Github pages
+
+output_dir: "."  # if publishing on Github pages

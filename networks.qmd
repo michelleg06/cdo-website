@@ -1,0 +1,59 @@
+---
+#title: "UNU-MERIT's Capacity Development Office"
+#date: '2024'
+output: html_document
+
+---
+<style>
+    body {
+    text-align: justify}
+</style>
+
+## Network Science, Economic Complexity and Fitness for Public Policies
+<br>
+
+> Have you ever heard of the old saying, birds of a feather flock together? 
+
+<br>
+
+Many social and economic phenomena are interconnected, as individuals and institutions are embedded within complex networks that shape behaviors, opportunities, and outcomes.For example, below we show a friendship network of UK academics in an anonymous faculty.
+It consists of 81 vertices (individuals) and 817 directed and weighted connections. The school affiliation of each individual is stored as a vertex attribute. This dataset serves as a precursor for co-authorship networks, and thus innovation clusters.
+<br>
+
+Network, whether social relationships, trade, or financial systems—serve as conduits for information, influence, and resources. Understanding these intricate connections is crucial for analyzing the spread of ideas, economic inequality, and the dynamics of cooperation and competition within society.
+<br>
+
+NECF4P is an online course on Network Science, and in particular its application to the novel field of Economic Complexity to study trade and innovation networks and global value chains.
+
+
+```{r, message=FALSE}
+library(igraph)
+library(igraphdata)
+data("UKfaculty")
+
+uklay <- layout_nicely(UKfaculty)
+E(UKfaculty)$intensity <-rnorm(gsize(UKfaculty), mean = 5, sd = 3) # friendship weight
+#clusters of edge types: we want to see what type of relationships exist in our sample
+E(UKfaculty)$relation <- sample(c("friendship", "colleagues", "romance", "academic_rivals"), size = gsize(UKfaculty), replace=T)
+
+#setting colors to Group attribute
+colores <- c("orange", "tomato", "royalblue", "pink") 
+V(UKfaculty)$color <- colores[V(UKfaculty)$Group]
+#by doing this before the plot, you no longer have to specify vertex color
+#also, you will notice in the plot that the order in which you set the colors
+#corresponds to the ascending order of the $Group attribute
+
+plot(UKfaculty,
+     edge.arrow.size=.04, 
+     main='UK faculty network',
+     vertex.size=8,
+     vertex.frame.color="gray",
+     #vertex.label.color="black",
+     #vertex.label.cex=0.8,
+     #vertex.label.dist=0.1,
+     #edge.curved=0.2
+     )
+
+
+
+```
