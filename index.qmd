@@ -23,7 +23,6 @@ knitr::include_graphics("/Users/michellegonzalez/Documents/GitHub/cdo_website/im
 ```
 </center>
 
-
 ## About us
 The Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s [Sustainable Development Goals.](https://sdgs.un.org/goals)
 
