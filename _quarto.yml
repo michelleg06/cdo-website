@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 format: 
   html:
@@ -43,7 +44,6 @@ website:
         icon: robot
         text: "Machine Learning for Policy"
 
-output-dir: docs  
 
 
 
