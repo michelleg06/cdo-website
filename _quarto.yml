@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: docs
 
+resources:
+  - scorm  # Specify the relative path to your SCORM folder
+
 format: 
   html:
     page-layout: full
@@ -16,7 +19,7 @@ format:
     fontawesome: true  # Enable Font Awesome icons
 
 website:
-  reader-mode: true
+  reader-mode: false
   open-graph: true
   page-navigation: true
   page-footer: 

@@ -1,0 +1,32 @@
+PhoneResponsive={"785":{
+"pageLayer":{"w":785,"h":450,"bgColor":"#ffffff","bgImage":"images/image0045.png","bgSize":"785px 441px","bgRepeat":"repeat-y"}
+,
+"image705":{"x":11,"y":13,"w":209,"h":71,"bOffBottom":0,"i":"images/image0046.png"}
+,
+"image707":{"x":636,"y":14,"w":143,"h":68,"bOffBottom":0,"i":"images/image0047.png"}
+,
+"text708":{"x":0,"y":201,"w":784,"h":99,"txtscale":100,"bOffBottom":0}
+,
+"RCDResetQuestion":function(){
+try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
+}
+,
+"RCDResultResize":function(){}
+,"preload":['images/image0045.png']
+},
+"480":{
+"pageLayer":{"w":480,"h":763,"bgColor":"#ffffff","bgImage":"images/image0045.png","bgSize":"480px 270px","bgRepeat":"repeat-y"}
+,
+"image705":{"x":7,"y":17,"w":128,"h":43,"bOffBottom":0,"i":"images/image0046.png"}
+,
+"image707":{"x":389,"y":18,"w":88,"h":42,"bOffBottom":0,"i":"images/image0047.png"}
+,
+"text708":{"x":0,"y":258,"w":480,"h":99,"txtscale":100,"bOffBottom":0}
+,
+"RCDResetQuestion":function(){
+try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
+}
+,
+"RCDResultResize":function(){}
+,"preload":['images/image0045.png']
+}}
