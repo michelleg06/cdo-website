@@ -182,13 +182,13 @@ button {
     z-index: -1;}*/
 
 
-#firstlist li {
+#firstlist ul {
     padding: 0.5rem 1.5rem 1rem;
     border-radius: 1.5rem;
     background: rgba(100, 149, 237, 0.3); /* Soft transparent Cornflower Blue */
 }
 
-#firstlist li + li {
+#firstlist ul + ul {
     margin-top: 1rem;
 }
 
@@ -270,3 +270,37 @@ button:hover {
 .button i {
   font-size: 1.2rem;
 }
+
+/* Force the main content area to take up full width */
+.quarto-container,
+.quarto-document-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure the iframe takes up the full width */
+iframe {
+    width: 100% !important;
+    height: 90vh; /* Adjust as needed for height */
+    border: none;
+    overflow: hidden;
+}
+
+/* -------- Title logo to the left of the banner -----------*/
+
+/*.quarto-title-block .quarto-title-banner {
+  background-image: url(images/logo.png);
+  background-size: 300px;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 10px;
+  background-origin: content-box;
+}*/
+
+.navbar-logo {
+  max-height: 100px;
+}
+
+

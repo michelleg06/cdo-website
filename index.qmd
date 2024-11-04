@@ -2,8 +2,11 @@
 #title: "UNU-MERIT's Capacity Development Office"
 #date: '2024'
 output: html_document
-
+editor: 
+  markdown: 
+    wrap: 72
 ---
+
 <style>
     body {
     text-align: justify}
@@ -18,80 +21,103 @@ library(leaflet)
 ```
 
 <center>
-```{r pressure, echo=FALSE, fig.cap=" ", out.width = '65%'}
-knitr::include_graphics("/Users/michellegonzalez/Documents/GitHub/cdo_website/images/logo.png")
+
+```{r pressure, echo=FALSE, fig.cap=" ", out.width = '100%'}
+knitr::include_graphics("/Users/michellegonzalez/Documents/GitHub/cdo_website/images/cdo_banner.png")
 ```
+
 </center>
 
 ## About us
-The Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s [Sustainable Development Goals.](https://sdgs.un.org/goals)
 
-**Our purpose** as a university and UN think tank is to offer unique learning and training opportunities not only to students but also to everyone looking to address contemporary and future sustainable development challenges, expand their knowledge and networks, and achieve personal and professional growth.
+The Capacity Development Office (CDO) of UNU-MERIT provides
+career-enhancing training for policymakers and practitioners. Our
+programmes are designed to help participants influence and implement
+policy related to the UN’s [Sustainable Development
+Goals.](https://sdgs.un.org/goals)
 
-**Our participants** come from across the world and backgrounds including  government, civil society, academia, NGOs, international organisations and the UN itself. To allow work activities and educational programmes to be undertaken simultaneously, courses and trainings are offered in-person, online and with a blend of both approaches.
+**Our purpose** as a university and UN think tank is to offer unique
+learning and training opportunities not only to students but also to
+everyone looking to address contemporary and future sustainable
+development challenges, expand their knowledge and networks, and achieve
+personal and professional growth.
 
-**Our programmes** cover a wide range of topics and societal issues. Often developed in collaboration with UNU-MERIT’s Research Units and external partners, they translate and tailor academic knowledge for professional uptake in order to have true impact.
+**Our participants** come from across the world and backgrounds
+including government, civil society, academia, NGOs, international
+organisations and the UN itself. To allow work activities and
+educational programmes to be undertaken simultaneously, courses and
+trainings are offered in-person, online and with a blend of both
+approaches.
 
-Besides our free learning materials, which you can find in this website, we also offer a range of **paid options**, such as:
+**Our programmes** cover a wide range of topics and societal issues.
+Often developed in collaboration with UNU-MERIT’s Research Units and
+external partners, they translate and tailor academic knowledge for
+professional uptake in order to have true impact.
+
+Besides our free learning materials, which you can find in this website,
+we also offer a range of **paid options**, such as: <br> <br>
+
+<center> <ul id="firstlist">
+
+<ul>Personal tutor to guide you through the free materials and
+resources</ul>
+
+<ul>Personalized workshops or in-depth learning content development</ul>
+
+<ul>Paid courses on various topics.</ul>
+
+</ul> </center>
+
 <br>
-<br>
 
-<ul id="firstlist">
-	<li>Personal tutor to guide you through the free materials and resources</li>
-	<li>Personalized workshops or in-depth learning content development</li>
-	<li>Paid courses on various topics.</li>
-</ul>
-<br>
-<center>
-<a href="https://unu.edu/sites/default/files/2024-02/CDO%20Flyer_UNU%20MERIT.pdf" download>
-  <button class="button">
-    <i class="bi bi-cloud-arrow-down"></i> <!-- Include the cloud-arrow-down icon -->
-    Download our Brochure
-  </button>
-</a>
-</center>
+<center><a href="https://unu.edu/sites/default/files/2024-02/CDO%20Flyer_UNU%20MERIT.pdf" download>
+<button class="button"> <i class="bi bi-cloud-arrow-down"></i>
+<!-- Include the cloud-arrow-down icon --> Download our Brochure
+</button> </a></center>
 
 ## Contact us
 
-You can get in touch with us via email, by sending us a message through the contact form, or calling our offices at 📞 +31 (0)43 388 4400.
+::: {.columns}
+  
+::: {.column width="50%"}
+For more information, feel free to reach out:
 
-<br>
+<ul>📞: <a href="tel:+31433884400">+31 (0)43 388 4400</a></ul>
+    
+<ul>
+      <a href="mailto:cdo@merit.unu.edu"><button class="button"><i class="bi bi-envelope-at"></i> cdo@merit.unu.edu</button></a>
+</ul>
 
-<center>
-<a href="mailto:michelle.gonzalez.am@gmail.com">
-    <button class="button">
-        <i class="bi bi-envelope-at"></i> Email us
-    </button>
-</a>
+<div style="text-align: left; max-width: 300px;">
+<ul>**Or leave a message below!**</ul>
 
-</center>
-<br>
-<center>**Or leave a message below!** <center>
-<br>
-<form action="https://example.com/submit-form" method="POST">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
+<form action="https://formspree.io/f/xeoqawkv" method="POST" style="font-size: 14px;">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 8px; padding: 6px;">
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 8px; padding: 6px;">
 
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="4" required></textarea><br><br>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="3" required style="width: 100%; margin-bottom: 8px; padding: 6px;"></textarea>
 
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" style="width: 100%; padding: 8px; font-size: 14px; cursor: pointer;">
 </form>
+</div>
+:::
+
+::: {.column width="50%"}
 
 <br>
 <br>
+<center><strong>Find us on OpenStreetMap!</strong></center>
 
-**Find us on OpenStreetMap!**
-<br>
-<center><i class="bi bi-geo"></i> Boschstraat 24, 6211 AX Maastricht, The Netherlands.</center>
+<center>📍 Boschstraat 24, 6211 AX Maastricht, The Netherlands.</center>
 
 ```{r, echo = FALSE}
 # Create an interactive OpenStreetMap map with UNU-MERIT and CDO office location
 leaflet() %>%
   addTiles() %>% # Add default OpenStreetMap map tiles
   addMarkers(lng = 5.691, lat = 50.852, popup = "UNU-MERIT in Maastricht")
-
 ```
+

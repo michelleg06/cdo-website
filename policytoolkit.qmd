@@ -1,0 +1,14 @@
+---
+title: "How to communicate research through policy briefs"
+class: "full-width-content"
+---
+
+From research to impact: this policy brief toolkit will help you gain the skills to effectively communicate your research findings to policy audiences. 
+
+<iframe src="scorm/html/How to communicate research through policy briefs- Updated/a001index.html" 
+        width="100%" 
+        height="600px" 
+        frameborder="0" 
+        style="margin: 0 auto; display: block;" 
+        allowfullscreen>
+</iframe>

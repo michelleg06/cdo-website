@@ -1,0 +1,21 @@
+---
+title: "ML4PP: Machine Learning for Public Policies"
+#date: '2024'
+output: html_document
+---
+
+<style>
+    body {
+    text-align: justify}
+</style>
+
+<center><strong><h1>Welcome!</h1></strong></center>
+
+We have hosted the [*Machine Learning for Public Policies*](https://www.ml4publicpolicy.com/) course on a separate website for your convenience. The course was once live with regular meetings and tutors. Now, the course is asynchronous. All videos, reproduction scripts, and data materials remain online for you to follow at your own pace. 
+
+
+::: {.callout-note}
+If you would like to hire a `private tutor` to guide you through the course, or have us develop workshops with `unique policy use cases`, do not hesitate to contact us!
+:::
+
+

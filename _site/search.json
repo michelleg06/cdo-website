@@ -2,29 +2,43 @@
   {
     "objectID": "index.html#about-us",
     "href": "index.html#about-us",
-    "title": "CDO",
+    "title": "",
     "section": "About us",
-    "text": "About us\nThe Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s Sustainable Development Goals.\nOur purpose as a university and UN think tank is to offer unique learning and training opportunities not only to students but also to everyone looking to address contemporary and future sustainable development challenges, expand their knowledge and networks, and achieve personal and professional growth.\nOur participants come from across the world and backgrounds including government, civil society, academia, NGOs, international organisations and the UN itself. To allow work activities and educational programmes to be undertaken simultaneously, courses and trainings are offered in-person, online and with a blend of both approaches.\nOur programmes cover a wide range of topics and societal issues. Often developed in collaboration with UNU-MERIT’s Research Units and external partners, they translate and tailor academic knowledge for professional uptake in order to have true impact.\nBesides our free learning materials, which you can find in this website, we also offer a range of paid options, such as:  \n\n\nPersonal tutor to guide you through the free materials and resources\n\n\nPersonalized workshops or in-depth learning content development\n\n\nPaid courses on various topics.\n\n\n\n\n    Download our Brochure"
+    "text": "About us\nThe Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s Sustainable Development Goals.\nOur purpose as a university and UN think tank is to offer unique learning and training opportunities not only to students but also to everyone looking to address contemporary and future sustainable development challenges, expand their knowledge and networks, and achieve personal and professional growth.\nOur participants come from across the world and backgrounds including government, civil society, academia, NGOs, international organisations and the UN itself. To allow work activities and educational programmes to be undertaken simultaneously, courses and trainings are offered in-person, online and with a blend of both approaches.\nOur programmes cover a wide range of topics and societal issues. Often developed in collaboration with UNU-MERIT’s Research Units and external partners, they translate and tailor academic knowledge for professional uptake in order to have true impact.\nBesides our free learning materials, which you can find in this website, we also offer a range of paid options, such as:  \n\n\n\nPersonal tutor to guide you through the free materials and resources\n\n\nPersonalized workshops or in-depth learning content development\n\n\nPaid courses on various topics.\n\n\n\n\n\n    Download our Brochure"
   },
   {
     "objectID": "index.html#contact-us",
     "href": "index.html#contact-us",
-    "title": "CDO",
+    "title": "",
     "section": "Contact us",
-    "text": "Contact us\nYou can get in touch with us via email, by sending us a message through the contact form, or calling our offices at 📞 +31 (0)43 388 4400.\n\n\n   Email us  \n\n\n\nOr leave a message below!\n\n\n\nName: \nEmail: \nMessage:\n\n\n\n\n \nFind us on OpenStreetMap! \n\n Boschstraat 24, 6211 AX Maastricht, The Netherlands."
+    "text": "Contact us\n\n\nFor more information, feel free to reach out:\n\n📞: +31 (0)43 388 4400\n\n\n cdo@merit.unu.edu\n\n\n\nOr leave a message below!\n\n\nName: \nEmail: \nMessage:\n\n\n\n\n\n \n\nFind us on OpenStreetMap!\n\n\n📍 Boschstraat 24, 6211 AX Maastricht, The Netherlands."
   },
   {
     "objectID": "networks.html",
     "href": "networks.html",
-    "title": "CDO",
+    "title": "",
     "section": "",
     "text": "Have you ever heard of the old saying, birds of a feather flock together?\n\n\nMany social and economic phenomena are interconnected, as individuals and institutions are embedded within complex networks that shape behaviors, opportunities, and outcomes.For example, below we show a friendship network of UK academics in an anonymous faculty. It consists of 81 vertices (individuals) and 817 directed and weighted connections. The school affiliation of each individual is stored as a vertex attribute. This dataset serves as a precursor for co-authorship networks, and thus innovation clusters. \nNetwork, whether social relationships, trade, or financial systems—serve as conduits for information, influence, and resources. Understanding these intricate connections is crucial for analyzing the spread of ideas, economic inequality, and the dynamics of cooperation and competition within society. \nNECF4P is an online course on Network Science, and in particular its application to the novel field of Economic Complexity to study trade and innovation networks and global value chains.\n\n\nCode\nlibrary(igraph)\nlibrary(igraphdata)\ndata(\"UKfaculty\")\n\nuklay &lt;- layout_nicely(UKfaculty)\nE(UKfaculty)$intensity &lt;-rnorm(gsize(UKfaculty), mean = 5, sd = 3) # friendship weight\n#clusters of edge types: we want to see what type of relationships exist in our sample\nE(UKfaculty)$relation &lt;- sample(c(\"friendship\", \"colleagues\", \"romance\", \"academic_rivals\"), size = gsize(UKfaculty), replace=T)\n\n#setting colors to Group attribute\ncolores &lt;- c(\"orange\", \"tomato\", \"royalblue\", \"pink\") \nV(UKfaculty)$color &lt;- colores[V(UKfaculty)$Group]\n#by doing this before the plot, you no longer have to specify vertex color\n#also, you will notice in the plot that the order in which you set the colors\n#corresponds to the ascending order of the $Group attribute\n\nplot(UKfaculty,\n     edge.arrow.size=.04, \n     main='UK faculty network',\n     vertex.size=8,\n     vertex.frame.color=\"gray\",\n     #vertex.label.color=\"black\",\n     #vertex.label.cex=0.8,\n     #vertex.label.dist=0.1,\n     #edge.curved=0.2\n     )"
   },
   {
     "objectID": "networks.html#network-science-economic-complexity-and-fitness-for-public-policies",
     "href": "networks.html#network-science-economic-complexity-and-fitness-for-public-policies",
-    "title": "CDO",
+    "title": "",
     "section": "",
     "text": "Have you ever heard of the old saying, birds of a feather flock together?\n\n\nMany social and economic phenomena are interconnected, as individuals and institutions are embedded within complex networks that shape behaviors, opportunities, and outcomes.For example, below we show a friendship network of UK academics in an anonymous faculty. It consists of 81 vertices (individuals) and 817 directed and weighted connections. The school affiliation of each individual is stored as a vertex attribute. This dataset serves as a precursor for co-authorship networks, and thus innovation clusters. \nNetwork, whether social relationships, trade, or financial systems—serve as conduits for information, influence, and resources. Understanding these intricate connections is crucial for analyzing the spread of ideas, economic inequality, and the dynamics of cooperation and competition within society. \nNECF4P is an online course on Network Science, and in particular its application to the novel field of Economic Complexity to study trade and innovation networks and global value chains.\n\n\nCode\nlibrary(igraph)\nlibrary(igraphdata)\ndata(\"UKfaculty\")\n\nuklay &lt;- layout_nicely(UKfaculty)\nE(UKfaculty)$intensity &lt;-rnorm(gsize(UKfaculty), mean = 5, sd = 3) # friendship weight\n#clusters of edge types: we want to see what type of relationships exist in our sample\nE(UKfaculty)$relation &lt;- sample(c(\"friendship\", \"colleagues\", \"romance\", \"academic_rivals\"), size = gsize(UKfaculty), replace=T)\n\n#setting colors to Group attribute\ncolores &lt;- c(\"orange\", \"tomato\", \"royalblue\", \"pink\") \nV(UKfaculty)$color &lt;- colores[V(UKfaculty)$Group]\n#by doing this before the plot, you no longer have to specify vertex color\n#also, you will notice in the plot that the order in which you set the colors\n#corresponds to the ascending order of the $Group attribute\n\nplot(UKfaculty,\n     edge.arrow.size=.04, \n     main='UK faculty network',\n     vertex.size=8,\n     vertex.frame.color=\"gray\",\n     #vertex.label.color=\"black\",\n     #vertex.label.cex=0.8,\n     #vertex.label.dist=0.1,\n     #edge.curved=0.2\n     )"
+  },
+  {
+    "objectID": "policytoolkit.html",
+    "href": "policytoolkit.html",
+    "title": "How to communicate research through policy briefs",
+    "section": "",
+    "text": "From research to impact: this policy brief toolkit will help you gain the skills to effectively communicate your research findings to policy audiences."
+  },
+  {
+    "objectID": "ml4pp.html",
+    "href": "ml4pp.html",
+    "title": "ML4PP: Machine Learning for Public Policies",
+    "section": "",
+    "text": "Welcome!\n\n\n\nWe have hosted the Machine Learning for Public Policies course on a separate website for your convenience. The course was once live with regular meetings and tutors. Now, the course is asynchronous. All videos, reproduction scripts, and data materials remain online for you to follow at your own pace.\n\n\n\n\n\n\nNote\n\n\n\nIf you would like to hire a private tutor to guide you through the course, or have us develop workshops with unique policy use cases, do not hesitate to contact us!"
   }
 ]

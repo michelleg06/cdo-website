@@ -1,6 +1,19 @@
 project:
   type: website
 
+format: 
+  html:
+    page-layout: full
+    theme: cosmo
+    css: style.css
+    smooth-scroll: true
+    code-annotations: hover
+    title-block-banner: true
+    toc: false
+    code-fold: true
+    code-summary: "Code"
+    fontawesome: true  # Enable Font Awesome icons
+
 website:
   reader-mode: true
   open-graph: true
@@ -13,8 +26,9 @@ website:
       - icon: building 
         href: https://unu.edu/merit 
 
-  title: "CDO"
+  # Define the logo directly in the navbar section
   navbar:
+    logo: images/logo.png
     right:
       - href: index.qmd
         icon: globe
@@ -22,25 +36,15 @@ website:
       - href: networks.qmd
         icon: share
         text: "Economic Networks"
-
-
-    
-
-format:
-  html:
-    theme: cosmo
-    css: style.css
-    smooth-scroll: true
-    code-annotations: hover
-    title-block-banner: true
-    toc: false
-    #toc-location: left
-    #toc-title: " "
-    code-fold: true
-    code-summary: "Code"
-    fontawesome: true  # Enable Font Awesome icons
-    #includes:
-    #  after_body: footer.html  # Correct indentation here
-
+      - href: policytoolkit.qmd
+        icon: briefcase
+        text: "Policy Toolkit"
+      - href: ml4pp.qmd
+        icon: robot
+        text: "Machine Learning for Policy"
 
 output_dir: "."  # if publishing on Github pages
+
+
+
+

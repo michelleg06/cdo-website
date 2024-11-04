@@ -2,29 +2,26 @@
 #title: "UNU-MERIT's Capacity Development Office"
 #date: '2024'
 output: html_document
-
 ---
+
 <style>
     body {
     text-align: justify}
 </style>
 
 ## Network Science, Economic Complexity and Fitness for Public Policies
-<br>
-
-> Have you ever heard of the old saying, birds of a feather flock together? 
 
 <br>
 
-Many social and economic phenomena are interconnected, as individuals and institutions are embedded within complex networks that shape behaviors, opportunities, and outcomes.For example, below we show a friendship network of UK academics in an anonymous faculty.
-It consists of 81 vertices (individuals) and 817 directed and weighted connections. The school affiliation of each individual is stored as a vertex attribute. This dataset serves as a precursor for co-authorship networks, and thus innovation clusters.
+> Have you ever heard of the old saying, birds of a feather flock together?
+
 <br>
 
-Network, whether social relationships, trade, or financial systems—serve as conduits for information, influence, and resources. Understanding these intricate connections is crucial for analyzing the spread of ideas, economic inequality, and the dynamics of cooperation and competition within society.
-<br>
+Many social and economic phenomena are interconnected, as individuals and institutions are embedded within complex networks that shape behaviors, opportunities, and outcomes.For example, below we show a friendship network of UK academics in an anonymous faculty. It consists of 81 vertices (individuals) and 817 directed and weighted connections. The school affiliation of each individual is stored as a vertex attribute. This dataset serves as a precursor for co-authorship networks, and thus innovation clusters. <br>
+
+Network, whether social relationships, trade, or financial systems—serve as conduits for information, influence, and resources. Understanding these intricate connections is crucial for analyzing the spread of ideas, economic inequality, and the dynamics of cooperation and competition within society. <br>
 
 NECF4P is an online course on Network Science, and in particular its application to the novel field of Economic Complexity to study trade and innovation networks and global value chains.
-
 
 ```{r, message=FALSE}
 library(igraph)
