@@ -4,7 +4,6 @@ project:
 
 resources:
   - scorm  # Specify the relative path to your SCORM folder
-  - SCORM_API_wrapper.js # to simulate the LMS API requested by scorm pkg
 
 format: 
   html:
