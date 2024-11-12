@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index</title>
+<title>networks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -67,16 +101,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
 
 
 <link rel="stylesheet" href="style.css">
@@ -100,12 +124,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> <i class="bi bi-globe" role="img">
+    <a class="nav-link" href="./index.html"> <i class="bi bi-globe" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./networks.html"> <i class="bi bi-share" role="img">
+    <a class="nav-link active" href="./networks.html" aria-current="page"> <i class="bi bi-share" role="img">
 </i> 
 <span class="menu-text">Economic Networks</span></a>
   </li>  
@@ -141,83 +165,56 @@ ul.task-list li input[type="checkbox"] {
     body {
     text-align: justify}
 </style>
-<center>
+<section id="network-science-economic-complexity-and-fitness-for-public-policies" class="level2">
+<h2 class="anchored" data-anchor-id="network-science-economic-complexity-and-fitness-for-public-policies">Network Science, Economic Complexity and Fitness for Public Policies</h2>
+<p><br></p>
+<blockquote class="blockquote">
+<p>Have you ever heard of the old saying, birds of a feather flock together?</p>
+</blockquote>
+<p><br></p>
+<p>Many social and economic phenomena are interconnected, as individuals and institutions are embedded within complex networks that shape behaviors, opportunities, and outcomes.For example, below we show a friendship network of UK academics in an anonymous faculty. It consists of 81 vertices (individuals) and 817 directed and weighted connections. The school affiliation of each individual is stored as a vertex attribute. This dataset serves as a precursor for co-authorship networks, and thus innovation clusters. <br></p>
+<p>Network, whether social relationships, trade, or financial systems—serve as conduits for information, influence, and resources. Understanding these intricate connections is crucial for analyzing the spread of ideas, economic inequality, and the dynamics of cooperation and competition within society. <br></p>
+<p>NECF4P is an online course on Network Science, and in particular its application to the novel field of Economic Complexity to study trade and innovation networks and global value chains.</p>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraphdata)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"UKfaculty"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>uklay <span class="ot">&lt;-</span> <span class="fu">layout_nicely</span>(UKfaculty)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(UKfaculty)<span class="sc">$</span>intensity <span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="fu">gsize</span>(UKfaculty), <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">3</span>) <span class="co"># friendship weight</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#clusters of edge types: we want to see what type of relationships exist in our sample</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(UKfaculty)<span class="sc">$</span>relation <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"friendship"</span>, <span class="st">"colleagues"</span>, <span class="st">"romance"</span>, <span class="st">"academic_rivals"</span>), <span class="at">size =</span> <span class="fu">gsize</span>(UKfaculty), <span class="at">replace=</span>T)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#setting colors to Group attribute</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>colores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"orange"</span>, <span class="st">"tomato"</span>, <span class="st">"royalblue"</span>, <span class="st">"pink"</span>) </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(UKfaculty)<span class="sc">$</span>color <span class="ot">&lt;-</span> colores[<span class="fu">V</span>(UKfaculty)<span class="sc">$</span>Group]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#by doing this before the plot, you no longer have to specify vertex color</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#also, you will notice in the plot that the order in which you set the colors</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#corresponds to the ascending order of the $Group attribute</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(UKfaculty,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>     <span class="at">edge.arrow.size=</span>.<span class="dv">04</span>, </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">'UK faculty network'</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>     <span class="at">vertex.size=</span><span class="dv">8</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>     <span class="at">vertex.frame.color=</span><span class="st">"gray"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>     <span class="co">#vertex.label.color="black",</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>     <span class="co">#vertex.label.cex=0.8,</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>     <span class="co">#vertex.label.dist=0.1,</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>     <span class="co">#edge.curved=0.2</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>     )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="images/cdo_banner.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="networks_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-</center>
-<section id="about-us" class="level2">
-<h2 class="anchored" data-anchor-id="about-us">About us</h2>
-<p>The Capacity Development Office (CDO) of UNU-MERIT provides career-enhancing training for policymakers and practitioners. Our programmes are designed to help participants influence and implement policy related to the UN’s <a href="https://sdgs.un.org/goals">Sustainable Development Goals.</a></p>
-<p><strong>Our purpose</strong> as a university and UN think tank is to offer unique learning and training opportunities not only to students but also to everyone looking to address contemporary and future sustainable development challenges, expand their knowledge and networks, and achieve personal and professional growth.</p>
-<p><strong>Our participants</strong> come from across the world and backgrounds including government, civil society, academia, NGOs, international organisations and the UN itself. To allow work activities and educational programmes to be undertaken simultaneously, courses and trainings are offered in-person, online and with a blend of both approaches.</p>
-<p><strong>Our programmes</strong> cover a wide range of topics and societal issues. Often developed in collaboration with UNU-MERIT’s Research Units and external partners, they translate and tailor academic knowledge for professional uptake in order to have true impact.</p>
-<p>Besides our free learning materials, which you can find in this website, we also offer a range of <strong>paid options</strong>, such as: <br> <br></p>
-<center>
-<ul id="firstlist">
-<ul>
-Personal tutor to guide you through the free materials and resources
-</ul>
-<ul>
-Personalized workshops or in-depth learning content development
-</ul>
-<ul>
-Paid courses on various topics.
-</ul>
-</ul>
-</center>
-<p><br></p>
-<center>
-<a href="https://unu.edu/sites/default/files/2024-02/CDO%20Flyer_UNU%20MERIT.pdf" download=""> <button class="button"> <i class="bi bi-cloud-arrow-down"></i> <!-- Include the cloud-arrow-down icon --> Download our Brochure </button> </a>
-</center>
-</section>
-<section id="contact-us" class="level2">
-<h2 class="anchored" data-anchor-id="contact-us">Contact us</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>For more information, feel free to reach out:</p>
-<ul>
-📞: <a href="tel:+31433884400">+31 (0)43 388 4400</a>
-</ul>
-<ul>
-<a href="mailto:cdo@merit.unu.edu"><button class="button"><i class="bi bi-envelope-at"></i> cdo@merit.unu.edu</button></a>
-</ul>
-<div style="text-align: left; max-width: 300px;">
-<ul>
-<strong>Or leave a message below!</strong>
-</ul>
-<form action="https://formspree.io/f/xeoqawkv" method="POST" style="font-size: 14px;">
-<p><label for="name">Name:</label> <input type="text" id="name" name="name" required="" style="width: 100%; margin-bottom: 8px; padding: 6px;"></p>
-<p><label for="email">Email:</label> <input type="email" id="email" name="email" required="" style="width: 100%; margin-bottom: 8px; padding: 6px;"></p>
-<label for="message">Message:</label>
-<textarea id="message" name="message" rows="3" required="" style="width: 100%; margin-bottom: 8px; padding: 6px;"></textarea>
-<input type="submit" value="Submit" style="width: 100%; padding: 8px; font-size: 14px; cursor: pointer;">
-</form>
-</div>
-</div><div class="column" style="width:50%;">
-<br> <br>
-<center>
-<strong>Find us on OpenStreetMap!</strong>
-</center>
-<center>
-📍 Boschstraat 24, 6211 AX Maastricht, The Netherlands.
-</center>
-<div class="cell">
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-5cd5d873ab0e9b4b2574" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-5cd5d873ab0e9b4b2574">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[50.852,5.691,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"UNU-MERIT in Maastricht",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[50.852,50.852],"lng":[5.691,5.691]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
 
 
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
